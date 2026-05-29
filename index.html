@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>張家黃金果園 - 官方網站</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --primary-color: #1e4620;
+            --secondary-color: #f3b900;
+            --text-dark: #2c2c2c;
+            --text-light: #ffffff;
+            --bg-light: #fdfbf7;
+            --bg-white: #ffffff;
+            --border-color: #e5dfd5;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, "Noto Sans TC", sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+        }
+        .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .hero {
+            background: linear-gradient(rgba(30, 70, 32, 0.75), rgba(30, 70, 32, 0.6)), 
+                        url('http://googleusercontent.com/image_generation_content/0');
+            background-size: cover;
+            background-position: center;
+            color: var(--text-light);
+            text-align: center;
+            padding: 120px 20px;
+        }
+        .hero h1 { font-size: 2.4rem; margin-bottom: 20px; font-weight: 700; text-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+        .hero p { font-size: 1.25rem; margin-bottom: 35px; opacity: 0.95; text-shadow: 0 2px 5px rgba(0,0,0,0.3); }
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: #1e4620;
+            padding: 14px 40px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.3); background-color: #dda800; }
+        section { padding: 70px 0; }
+        .section-title { text-align: center; font-size: 2rem; color: var(--primary-color); margin-bottom: 45px; position: relative; padding-bottom: 12px; }
+        .section-title::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 60px; height: 4px; background-color: var(--secondary-color); border-radius: 2px; }
+        .preorder-box { background-color: var(--bg-white); border-radius: 16px; padding: 35px; box-shadow: 0 10px 30px rgba(30,70,32,0.05); margin-bottom: 30px; border: 1px solid rgba(30,70,32,0.05); }
+        .time-info { background-color: #f2f7f3; border-left: 5px solid var(--primary-color); padding: 18px 22px; margin-bottom: 30px; border-radius: 0 12px 12px 0; }
+        .time-info p { margin-bottom: 8px; font-size: 1.05rem; }
+        .table-responsive { width: 100%; overflow-x: auto; margin-bottom: 30px; }
+        table { width: 100%; border-collapse: collapse; min-width: 600px; }
+        th, td { padding: 18px; text-align: left; border-bottom: 1px solid var(--border-color); }
+        th { background-color: #f8f9f6; color: var(--primary-color); font-weight: bold; font-size: 1.05rem; }
+        .price-highlight { color: #c94a29; font-weight: bold; font-size: 1.15rem; }
+        .bg-white-section { background-color: var(--bg-white); }
+        .features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px; }
+        @media (max-width: 768px) { .features-grid { grid-template-columns: 1fr; } }
+        .feature-item { padding: 30px; border-radius: 12px; background-color: var(--bg-light); border-top: 5px solid var(--primary-color); box-shadow: 0 4px 15px rgba(0,0,0,0.02); }
+        .feature-item h3 { color: var(--primary-color); margin-bottom: 15px; font-size: 1.4rem; }
+        .faq-item { background-color: var(--bg-white); padding: 25px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.02); border-left: 4px solid var(--secondary-color); }
+        .faq-item h3 { font-size: 1.2rem; color: var(--primary-color); margin-bottom: 10px; }
+        .faq-item p { color: #4a4a4a; font-size: 1.05rem; }
+        footer { background-color: var(--primary-color); color: var(--text-light); padding: 60px 20px 40px 20px; text-align: center; }
+        .footer-content h2 { font-size: 1.8rem; margin-bottom: 15px; letter-spacing: 1px; }
+        .footer-links { margin: 30px 0; }
+        .btn-line { background-color: #06C755; color: white; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; margin: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
+        .btn-fb { background-color: #1877F2; color: white; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; margin: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
+        .copyright { margin-top: 40px; font-size: 0.95rem; opacity: 0.7; border-top: 1px solid rgba(255,255,255,0.15); padding-top: 25px; }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h1>從埔里的純淨無毒土地，到您手中的純粹甘甜</h1>
+            <p>張家黃金果園：100%零化學農藥友善耕作，每一口都是清甜Q彈的頂級果凍口感。</p>
+            <a href="#preorder" class="btn">搶先預購當季鮮果</a>
+        </div>
+    </header>
+
+    <!-- Pre-order Section -->
+    <section id="preorder">
+        <div class="container">
+            <h2 class="section-title">限時預購黃金區</h2>
+            <div class="preorder-box">
+                <div class="time-info">
+                    <p><strong>📅 預購期間：</strong>即日起 至 06月14日止（限量採收，額滿提早關單）</p>
+                    <p><strong>🚚 出貨時間：</strong>堅持在樹上自然熟成，依訂單順序現採現發，確保產地直送最新鮮。</p>
+                </div>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>當季預購項目</th>
+                                <th>包裝規格</th>
+                                <th>安心嘗鮮價</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>頂級送禮級黃金果 (Abiu)</strong></td>
+                                <td>特大果裝 / 5斤尊榮箱裝</td>
+                                <td class="price-highlight">產地直送免運費</td>
+                            </tr>
+                            <tr>
+                                <td><strong>家庭分享號黃金果</strong></td>
+                                <td>優選果裝 / 5斤精裝箱</td>
+                                <td class="price-highlight">溫馨分享優惠中</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div style="text-align: center; margin-top: 25px;">
+                    <a href="https://line.me" target="_blank" class="btn">立即填寫預購表單</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="bg-white-section" id="about">
+        <div class="container">
+            <h2 class="section-title">我們的堅持與信任背書</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3>🌱 100% 零化學農藥・純淨友善農法</h3>
+                    <p>我們深愛埔里的這片土地，因此摒棄所有方便的化學藥劑與化學農藥。改用物理防治與天然草生栽培，讓果樹在最自然、無毒的環境中與萬物共生。雖然耗時費工，但能確保每一顆黃金果都讓您與家人安心大口品嚐。</p>
+                </div>
+                <div class="feature-item">
+                    <h3>🪵 扎根在地天然「田土」培育</h3>
+                    <p>我們不用速成的商業培養土，而是讓果樹的根系深深扎進最厚實的埔里天然田土。透過大地的微量元素，滋養出果肉極致細膩、微甜不膩，宛如天然膠原蛋白果凍般的獨特神級口感。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+        <div class="container">
+            <h2 class="section-title">安心品嚐常見問答</h2>
+            <div class="faq-item">
+                <h3>Q：黃金果吃起來是什麼口感？真的有果凍感嗎？</h3>
+                <p>A：是的！高品質的黃金果本身並沒有濃烈刺鼻的果香，它的特色在於極致的乳白半透明果肉，切開後入口即化，口感清甜、綿密且帶有滿滿的膠原蛋白果凍感，是非常高級且優雅的自然甜味。</p>
+            </div>
+            <div class="faq-item">
+                <h3>Q：如果收到水果時有運送壓傷怎麼辦？</h3>
+                <p>A：由於我們堅持不灑化學農藥，每一顆果實都極其珍貴。出貨前我們都會進行嚴格的防撞分級包裝。若收到當天發現有因運送造成的嚴重損傷，請拍照傳至官方 LINE 客服，我們承諾百分之百辦理補寄或退款，讓您網購零風險。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <h2>張家黃金果園 (Puli, Nantou)</h2>
+            <p>100%無化學農藥友善耕作・清甜果凍口感的在地驕傲</p>
+            <div class="footer-links">
+                <a href="https://line.me" target="_blank" class="btn-line">🟢 點我加入官方 LINE 諮詢預購</a>
+                <a href="https://facebook.com" target="_blank" class="btn-fb">🔵 追蹤 Facebook 掌握採收日常</a>
+            </div>
+            <div class="copyright">
+                &copy; 2026 張家黃金果園. All Rights Reserved. 埔里友善大地農作
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
