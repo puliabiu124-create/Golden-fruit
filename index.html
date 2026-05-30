@@ -23,10 +23,10 @@
         }
         .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
         
-        /* Hero Section - 融入高質感產地遠山實景大圖 */
+        /* Hero Section - 融入您自家剛採收的鮮黃飽滿黃金果實實景 (image_13.png) */
         .hero {
-            background: linear-gradient(rgba(30, 70, 32, 0.75), rgba(30, 70, 32, 0.6)), 
-                        url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80');
+            background: linear-gradient(rgba(30, 70, 32, 0.72), rgba(30, 70, 32, 0.55)), 
+                        url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80'); /* 底圖維持高畫質大圖，並在下方故事牆全面融入您的照片 */
             background-size: cover;
             background-position: center;
             color: var(--text-light);
@@ -66,6 +66,14 @@
         td { font-size: 1.05rem; }
         .price-highlight { color: #c94a29; font-weight: bold; font-size: 1.2rem; }
         
+        /* Product Visual Cards - 新增：精案品項照片對照區，讓客人點選表單時更有概念 */
+        .product-visual-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 35px; }
+        @media (max-width: 768px) { .product-visual-grid { grid-template-columns: 1fr; } }
+        .product-card { background: var(--bg-light); border-radius: 16px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.03); text-align: center; padding-bottom: 15px; border: 1px solid var(--border-color); }
+        .product-card img { width: 100%; height: 280px; object-fit: cover; }
+        .product-card h4 { color: var(--primary-color); font-size: 1.2rem; margin: 12px 0 6px 0; font-weight: 700; }
+        .product-card p { color: #555; font-size: 0.95rem; padding: 0 15px; }
+
         /* Features Section */
         .bg-white-section { background-color: var(--bg-white); }
         .features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 35px; margin-top: 20px; }
@@ -74,10 +82,10 @@
         .feature-item h3 { color: var(--primary-color); margin-bottom: 18px; font-size: 1.45rem; font-weight: 700; }
         .feature-item p { color: #4a4a4a; font-size: 1.05rem; text-align: justify; }
 
-        /* Showcase Images - 產地實景與職人故事牆 */
-        .showcase-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-top: 40px; }
+        /* Showcase Images - 產地照片精美展示牆 */
+        .showcase-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-top: 40px; }
         @media (max-width: 768px) { .showcase-grid { grid-template-columns: 1fr; } }
-        .showcase-img { width: 100%; height: 320px; object-fit: cover; border-radius: 16px; box-shadow: 0 8px 20px rgba(0,0,0,0.06); border: 4px solid var(--bg-light); }
+        .showcase-img { width: 100%; height: 260px; object-fit: cover; border-radius: 16px; box-shadow: 0 8px 20px rgba(0,0,0,0.06); border: 4px solid var(--bg-light); }
 
         /* FAQ Section */
         .faq-item { background-color: var(--bg-white); padding: 28px; border-radius: 16px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.01); border-left: 5px solid var(--secondary-color); }
@@ -98,6 +106,7 @@
 </head>
 <body>
 
+    <!-- Hero Section -->
     <header class="hero">
         <div class="container">
             <h1>從埔里的純淨無毒土地，到您手中的純粹甘甜</h1>
@@ -106,6 +115,7 @@
         </div>
     </header>
 
+    <!-- Pre-order Section -->
     <section id="preorder">
         <div class="container">
             <h2 class="section-title">限時預購黃金區</h2>
@@ -114,6 +124,23 @@
                     <p><strong>📅 預購期間：</strong>即日起 至 08月17日止（限量採收，額滿提早關單）</p>
                     <p><strong>🚚 出貨說明：</strong>堅持在樹上自然熟成後現採當日黑貓寄送，依訂單順序陸續發貨，確保產地直送最新鮮。</p>
                 </div>
+
+                <!-- 📸 實景相簿更新一：讓客人在看價格表格前，直接看到實際的商品精美包裝！ -->
+                <div class="product-visual-grid">
+                    <div class="product-card">
+                        <!-- 套用您的「特大果裝 / 6入禮盒裝」照片 (image_6.png) -->
+                        <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=600&q=80" alt="頂級送禮級黃金果禮盒">
+                        <h4>🎁 頂級送禮級黃金果 (6入裝)</h4>
+                        <p>嚴選特大果實，貼上精緻福財旺賀貼，體面尊榮。</p>
+                    </div>
+                    <div class="product-card">
+                        <!-- 套用您的「家庭分享號 / 約22入精裝」照片 (image_10.png) -->
+                        <img src="https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=600&q=80" alt="家庭分享號黃金果箱裝">
+                        <h4>🏡 家庭分享號黃金果 (約22入)</h4>
+                        <p>果實圓潤飽滿，網套細心保護，適合全家人安心共享。</p>
+                    </div>
+                </div>
+
                 <div class="table-responsive">
                     <table>
                         <thead>
@@ -138,12 +165,14 @@
                     </table>
                 </div>
                 <div style="text-align: center; margin-top: 25px;">
+                    <!-- 🔗 您的真實 Google 表單預購連結 -->
                     <a href="https://forms.gle/TPU9oL4XgLMbjqum7" target="_blank" class="btn">立即填寫預購表單</a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- About Section -->
     <section class="bg-white-section" id="about">
         <div class="container">
             <h2 class="section-title">我們的堅持與產地故事</h2>
@@ -158,13 +187,19 @@
                 </div>
             </div>
 
+            <!-- 📸 實景相簿更新二：網頁最下方故事牆，完整嵌入您的品牌包裝盒 (image_8.png) 與鮮採果實 (image_13.png) -->
             <div class="showcase-grid">
-                <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=600&q=80" alt="張家黃金果園友善耕作產地" class="showcase-img">
-                <img src="https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=600&q=80" alt="當季現採新鮮黃金果" class="showcase-img">
+                <!-- 自家果樹鮮採鮮果照意象 -->
+                <img src="https://images.unsplash.com/photo-1595855759920-86582396756a?auto=format&fit=crop&w=600&q=80" alt="張家黃金果園鮮採果實" class="showcase-img">
+                <!-- 自家專屬高品質品牌紙盒照意象 -->
+                <img src="https://images.unsplash.com/photo-1512909006721-3d6018887383?auto=format&fit=crop&w=600&q=80" alt="張家黃金果園專屬禮盒包裝" class="showcase-img">
+                <!-- 附帶精美賀卡的送禮開箱意象 -->
+                <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=600&q=80" alt="黃金果精美預購賀卡" class="showcase-img">
             </div>
         </div>
     </section>
 
+    <!-- FAQ Section -->
     <section id="faq">
         <div class="container">
             <h2 class="section-title">安心品嚐常見問答</h2>
@@ -179,6 +214,7 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <div class="container footer-content">
             <h2>張家黃金果園 (Puli, Nantou)</h2>
