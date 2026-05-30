@@ -49,6 +49,22 @@
         }
         .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.25); background-color: #dda800; }
         
+        /* 📖 新增：專屬痞客邦故事按鈕的樣式 */
+        .btn-blog {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            padding: 12px 35px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+            margin-top: 25px;
+        }
+        .btn-blog:hover { background-color: var(--primary-color); color: var(--text-light); transform: translateY(-2px); }
+        
         section { padding: 80px 0; }
         .section-title { text-align: center; font-size: 2.1rem; color: var(--primary-color); margin-bottom: 45px; position: relative; padding-bottom: 15px; font-weight: 700; }
         .section-title::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 50px; height: 4px; background-color: var(--secondary-color); border-radius: 2px; }
@@ -183,7 +199,12 @@
                 </div>
             </div>
 
-            <!-- 🎯 修正成功：將原本展示鮮果盤和外盒的區塊，精準替換成您的實拍圖 fruit1.JPG 與 fruit2.JPG -->
+            <!-- 🎯 新增亮點：在文字與相簿之間，完美置入您的痞客邦部落格串聯按鈕 -->
+            <div style="text-align: center; margin-bottom: 20px;">
+                <a href="https://a0921355238.pixnet.net/blog" target="_blank" class="btn-blog">📖 點我進入「痞客邦部落格」看更多果園採收日常</a>
+            </div>
+
+            <!-- 下方故事牆展現鮮果實景 -->
             <div class="showcase-grid">
                 <img src="fruit1.JPG" alt="張家黃金果園產地鮮果實拍一" class="showcase-img">
                 <img src="fruit2.JPG" alt="張家黃金果園產地鮮果實拍二" class="showcase-img">
